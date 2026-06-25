@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='25,2 75,2 98,50 75,98 25,98 2,50' fill='%232E5339' stroke='%23D9A400' stroke-width='3'/%3E%3Cg transform='translate(50,51)'%3E%3Cellipse cx='0' cy='2' rx='9' ry='15' fill='%23D9A400'/%3E%3Cline x1='-9' y1='-3' x2='9' y2='-3' stroke='%232E5339' stroke-width='2.6'/%3E%3Cline x1='-9' y1='3' x2='9' y2='3' stroke='%232E5339' stroke-width='2.6'/%3E%3Ccircle cx='0' cy='-15' r='4.6' fill='%23D9A400'/%3E%3C/g%3E%3C/svg%3E">
+<title>Ruche d'Or — Miel pur du Bénin, testé et traçable</title>
+<meta name="description" content="Ruche d'Or : un miel pur, sans sirop ajouté, testé et traçable. Origine déclarée, pot scellé, numéro de lot. Commande directe par WhatsApp, livraison partout au Bénin.">
+<meta name="theme-color" content="#2E5339">
+
+<!-- Partage (aperçu des liens WhatsApp / réseaux) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ruche d'Or — Miel pur du Bénin">
+<meta property="og:description" content="Du rucher à votre table, sans détour. Miel pur, testé et traçable. Commande directe par WhatsApp.">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   RUCHE D'OR — feuille de style
+   Couleurs de marque, typographie, et tous les composants.
+   ============================================================ */
+:root{
+  --gold:#D9A400;          /* Or / Ambre */
+  --gold-deep:#c29400;
+  --green:#2E5339;         /* Vert Rucher */
+  --green-deep:#21402c;
+  --ivory:#F5EFE0;         /* Ivoire / Crème */
+  --cream:#FBF8EF;
+  --brown:#8A6300;         /* Brun Terre */
+  --ink:#3f4039;
+  --ink-soft:#54554c;
+  --line:rgba(46,83,57,.12);
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Hanken Grotesk',sans-serif;
+  color:var(--ink);
+  background:var(--ivory);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+::selection{background:var(--gold);color:var(--green);}
+h1,h2,h3{margin:0;font-weight:400;}
+p{margin:0;}
+
+.wrap{max-width:1200px;margin:0 auto;padding-left:clamp(20px,5vw,48px);padding-right:clamp(20px,5vw,48px);}
+.serif{font-family:'Marcellus',serif;}
+.script{font-family:'Cormorant Garamond',serif;font-style:italic;}
+.kicker{font-size:13px;letter-spacing:4px;text-transform:uppercase;font-weight:600;}
+
+/* ---- Boutons ---- */
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:16px;padding:16px 28px;border-radius:4px;letter-spacing:.3px;cursor:pointer;transition:background .15s ease,color .15s ease;}
+.btn--gold{background:var(--gold);color:var(--green-deep);}
+.btn--gold:hover{background:var(--gold-deep);}
+.btn--ghost{background:transparent;color:var(--green);border:1px solid rgba(46,83,57,.4);}
+.btn--ghost:hover{background:rgba(46,83,57,.06);}
+.btn--ghost-light{background:transparent;color:var(--ivory);border:1px solid rgba(245,239,224,.35);}
+.btn--ghost-light:hover{background:rgba(245,239,224,.08);}
+.btn--sm{font-size:15px;padding:13px 18px;justify-content:center;}
+
+/* ---- Bandeau d'annonce ---- */
+.announce{background:var(--green-deep);color:var(--ivory);text-align:center;font-size:13px;letter-spacing:1.5px;padding:9px 16px;font-weight:500;}
+
+/* ---- Header ---- */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(245,239,224,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:14px;padding-bottom:14px;}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand__name{font-family:'Marcellus',serif;font-size:24px;color:var(--gold);}
+.nav{display:flex;align-items:center;gap:clamp(14px,2.4vw,34px);flex-wrap:wrap;justify-content:flex-end;}
+.nav a{font-size:15px;color:var(--green);font-weight:500;}
+.nav a:hover{color:var(--brown);}
+.nav__wa{background:var(--gold);color:var(--green-deep)!important;font-weight:600;padding:10px 20px;border-radius:4px;}
+.nav__wa:hover{background:var(--gold-deep);}
+.nav__link{display:none;}
+@media(min-width:760px){.nav__link{display:inline;}}
+
+/* ---- Sections ---- */
+section{scroll-margin-top:80px;}
+.pad{padding-top:clamp(64px,9vw,120px);padding-bottom:clamp(64px,9vw,120px);}
+.sec--green{background:var(--green);color:var(--ivory);}
+.sec--ivory{background:var(--ivory);}
+.h2{font-family:'Marcellus',serif;font-size:clamp(34px,5vw,54px);line-height:1.2;}
+.lead{font-size:clamp(16px,1.8vw,18px);line-height:1.7;}
+
+/* ---- Héro ---- */
+.hero{position:relative;background:var(--ivory);overflow:hidden;}
+.hero__bg{position:absolute;top:-200px;right:-180px;opacity:.05;pointer-events:none;}
+.hero .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(40px,5vw,72px);align-items:center;padding-top:clamp(48px,7vw,96px);padding-bottom:clamp(48px,7vw,96px);}
+.hero__eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--brown);}
+.hero__title{font-family:'Marcellus',serif;font-size:clamp(52px,8vw,96px);line-height:.98;color:var(--gold);margin-top:22px;}
+.hero__slogan{font-size:clamp(24px,3.4vw,34px);color:var(--green);margin-top:18px;}
+.hero__text{font-size:clamp(16px,1.8vw,18px);line-height:1.7;color:var(--ink-soft);max-width:480px;margin-top:26px;}
+.hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px;}
+.hero__art{display:flex;justify-content:center;position:relative;}
+.hero__halo{position:absolute;width:min(420px,80%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 40%,rgba(217,164,0,.22),rgba(217,164,0,0) 70%);}
+
+/* ---- La promesse ---- */
+.promise__title{margin-top:20px;max-width:880px;text-wrap:pretty;}
+.promise__title em{color:var(--gold);font-style:normal;}
+.promise__lead{color:rgba(245,239,224,.8);max-width:680px;margin-top:24px;}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:rgba(245,239,224,.16);margin-top:56px;border:1px solid rgba(245,239,224,.16);}
+.promise__cell{background:var(--green);padding:34px 30px;}
+.promise__cell h3{font-family:'Marcellus',serif;font-size:21px;color:var(--ivory);margin-top:18px;}
+.promise__cell p{font-size:15px;line-height:1.6;color:rgba(245,239,224,.72);margin-top:8px;}
+
+/* ---- Le produit ---- */
+.product .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(40px,6vw,80px);align-items:center;}
+.product__art{display:flex;justify-content:center;position:relative;order:2;}
+.product__plinth{position:absolute;bottom:0;width:80%;height:70%;background:var(--cream);border-radius:8px;box-shadow:0 30px 60px rgba(60,40,5,.1);}
+.product__info{order:1;}
+.product__title{font-family:'Marcellus',serif;font-size:clamp(34px,5vw,52px);color:var(--green);margin-top:20px;line-height:1.15;}
+.product__text{font-size:clamp(16px,1.8vw,18px);line-height:1.7;color:var(--ink-soft);margin-top:24px;max-width:480px;}
+.formats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px;}
+@media(max-width:420px){.formats{grid-template-columns:1fr;}}
+.format{position:relative;background:var(--cream);border:1px solid var(--line);border-radius:8px;padding:24px 22px;}
+.format--feature{border-color:rgba(217,164,0,.55);box-shadow:0 10px 30px rgba(217,164,0,.12);}
+.format__tag{position:absolute;top:-11px;left:22px;background:var(--gold);color:var(--green-deep);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:3px;}
+.format__size{font-family:'Marcellus',serif;font-size:32px;color:var(--green);line-height:1;}
+.format__price{font-size:22px;font-weight:700;color:var(--gold);margin-top:10px;}
+.format__note{font-size:13px;color:var(--brown);margin-top:6px;letter-spacing:.3px;}
+.specs{display:flex;flex-direction:column;margin-top:30px;border-top:1px solid rgba(46,83,57,.15);}
+.specs__row{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid rgba(46,83,57,.15);}
+.specs__row dt{color:var(--brown);font-weight:600;font-size:14px;letter-spacing:1px;text-transform:uppercase;margin:0;}
+.specs__row dd{font-family:'Marcellus',serif;font-size:18px;color:var(--green);margin:0;text-align:right;}
+.product__link{display:inline-flex;align-items:center;gap:9px;margin-top:32px;color:var(--green);font-weight:600;font-size:16px;border-bottom:2px solid var(--gold);padding-bottom:3px;}
+
+/* ---- Deux pots côte à côte (section produit) ---- */
+.product__jars{display:flex;align-items:flex-end;justify-content:center;gap:20px;}
+.jar-outer{position:relative;flex-shrink:0;}
+.jar-outer--sm{width:173px;height:288px;}
+.jar-outer--sm .jar{position:absolute;bottom:0;left:50%;margin-left:-120px;transform:scale(.72);transform-origin:bottom center;}
+.jar-outer--lg{width:240px;height:400px;}
+
+/* ---- L'histoire ---- */
+.story{position:relative;overflow:hidden;}
+.story__bg{position:absolute;bottom:-160px;left:-130px;opacity:.06;pointer-events:none;}
+.story__inner{position:relative;max-width:760px;margin:0 auto;text-align:center;}
+.story__title{font-family:'Marcellus',serif;font-size:clamp(32px,4.6vw,48px);margin-top:20px;line-height:1.3;}
+.story__quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(20px,2.6vw,26px);color:rgba(245,239,224,.92);line-height:1.6;margin-top:30px;}
+.story__text{font-size:clamp(16px,1.8vw,18px);line-height:1.7;color:rgba(245,239,224,.78);margin-top:28px;}
+
+/* ---- Témoignages ---- */
+.tm__head{text-align:center;}
+.tm__title{font-family:'Marcellus',serif;font-size:clamp(32px,4.6vw,48px);color:var(--green);margin-top:16px;}
+.tm__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:54px;}
+.tm__card{background:var(--cream);border:1px solid var(--line);border-radius:8px;padding:34px 32px;display:flex;flex-direction:column;}
+.tm__quote{font-size:17px;line-height:1.65;color:var(--ink);margin-top:20px;flex:1;}
+.tm__who{margin-top:24px;padding-top:18px;border-top:1px solid var(--line);}
+.tm__name{font-family:'Marcellus',serif;font-size:18px;color:var(--green);}
+.tm__place{font-size:13px;color:var(--brown);letter-spacing:.5px;margin-top:3px;}
+.tm__note{text-align:center;font-size:14px;color:var(--brown);margin-top:32px;letter-spacing:.5px;}
+
+/* ---- Acheter ---- */
+.buy__head{text-align:center;}
+.buy__title{font-family:'Marcellus',serif;font-size:clamp(32px,4.6vw,48px);margin-top:16px;}
+.buy__lead{font-size:16px;line-height:1.7;color:rgba(245,239,224,.78);max-width:560px;margin:18px auto 0;}
+.buy__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px;margin-top:54px;}
+.buy__card{background:var(--green-deep);border-radius:8px;padding:38px 32px;display:flex;flex-direction:column;}
+.buy__card h3{font-family:'Marcellus',serif;font-size:23px;color:var(--ivory);margin-top:18px;}
+.buy__card p{font-size:15px;line-height:1.6;color:rgba(245,239,224,.74);margin-top:10px;flex:1;}
+.buy__card .btn{margin-top:24px;}
+
+/* ---- Footer ---- */
+.site-footer{background:var(--green-deep);color:var(--ivory);padding:clamp(56px,7vw,84px) clamp(20px,5vw,48px) 40px;}
+.site-footer .inner{max-width:1100px;margin:0 auto;}
+.footer__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px;}
+.footer__brand .script{font-size:20px;color:rgba(245,239,224,.85);margin-top:16px;}
+.footer__col .kicker{font-size:12px;letter-spacing:3px;color:var(--gold);}
+.footer__links{display:flex;flex-direction:column;gap:12px;margin-top:18px;}
+.footer__links a,.footer__links span{font-size:16px;color:var(--ivory);}
+.footer__links a:hover{color:var(--gold);}
+.footer__bar{margin-top:54px;padding-top:24px;border-top:1px solid rgba(245,239,224,.15);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:13px;color:rgba(245,239,224,.55);letter-spacing:.5px;}
+
+/* ---- Bouton flottant WhatsApp ---- */
+.fab{position:fixed;right:clamp(16px,3vw,28px);bottom:clamp(16px,3vw,28px);z-index:60;width:58px;height:58px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(33,64,44,.3);transition:background .15s ease;}
+.fab:hover{background:var(--gold-deep);}
+
+/* ============================================================
+   POT DE MIEL — illustration CSS pure
+   ============================================================ */
+.jar-scale{position:relative;}
+.jar{position:relative;width:240px;height:400px;margin:0 auto;flex:none;}
+.jar__shadow{position:absolute;left:50%;bottom:-4px;transform:translateX(-50%);width:206px;height:26px;background:radial-gradient(ellipse at center,rgba(60,42,8,.28),rgba(60,42,8,0) 70%);filter:blur(2px);}
+.jar__lid{position:absolute;top:0;left:50%;transform:translateX(-50%);width:178px;height:50px;background:linear-gradient(180deg,#37624329,#356041 8%,#2E5339 58%,#21402c);border-radius:9px 9px 5px 5px;box-shadow:inset 0 2px 0 rgba(255,255,255,.14),0 4px 7px rgba(0,0,0,.18);}
+.jar__lidband{position:absolute;top:35px;left:50%;transform:translateX(-50%);width:178px;height:7px;background:var(--gold);}
+.jar__neck{position:absolute;top:48px;left:50%;transform:translateX(-50%);width:152px;height:16px;background:linear-gradient(180deg,rgba(217,164,0,.55),rgba(217,164,0,.12));border-radius:4px;}
+.jar__body{position:absolute;top:56px;left:0;width:240px;height:344px;border-radius:22px 22px 32px 32px;overflow:hidden;background:linear-gradient(105deg,#b9810a 0%,#e7b117 33%,#d9a400 58%,#a9760400 58%,#aa7604 100%);box-shadow:inset 0 0 34px rgba(120,78,0,.4),inset 0 7px 12px rgba(255,255,255,.2);}
+.jar__top{position:absolute;top:0;left:0;right:0;height:20px;background:linear-gradient(180deg,rgba(255,228,128,.65),rgba(255,228,128,0));}
+.jar__glare{position:absolute;top:14px;left:16px;width:16px;height:312px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,.06));filter:blur(1px);}
+.jar__rshade{position:absolute;top:0;right:0;width:46px;height:100%;background:linear-gradient(270deg,rgba(78,48,0,.4),transparent);}
+.jar__edge{position:absolute;top:0;left:32px;width:9px;height:100%;background:linear-gradient(180deg,rgba(255,255,255,.38),rgba(255,255,255,0) 60%);}
+.jar__label{position:absolute;top:62px;left:50%;transform:translateX(-50%);width:174px;height:214px;background:var(--ivory);border-radius:11px;box-shadow:0 9px 20px rgba(50,28,0,.24),0 1px 0 rgba(255,255,255,.6);overflow:hidden;display:flex;flex-direction:column;align-items:center;padding:17px 13px;}
+.jar__wm{position:absolute;top:36px;left:50%;transform:translateX(-50%);opacity:.06;}
+.jar__seal{position:relative;z-index:1;}
+.jar__brand{font-family:'Marcellus',serif;font-size:22px;color:var(--gold);margin-top:6px;letter-spacing:.4px;position:relative;z-index:1;}
+.jar__rule{width:62px;height:1px;background:var(--gold);opacity:.5;margin:8px 0;position:relative;z-index:1;}
+.jar__pure{font-size:7.5px;letter-spacing:1.4px;color:var(--green);text-align:center;line-height:1.6;font-weight:600;position:relative;z-index:1;}
+.jar__foot{margin-top:auto;width:100%;display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:1;}
+.jar__lot{font-size:6.5px;color:var(--brown);line-height:1.7;letter-spacing:.4px;}
+.jar__weight{font-family:'Marcellus',serif;font-size:14px;color:var(--green);}
+</style>
+</head>
+<body>
+
+<!-- Sceau réutilisable (logo officiel : hexagone vert + abeille or) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<g id="rdo-bee" transform="translate(50,51)"><ellipse cx="-15" cy="-4" rx="11" ry="6.5" fill="#D9A400" fill-opacity=".38" transform="rotate(-28 -15 -4)"></ellipse><ellipse cx="15" cy="-4" rx="11" ry="6.5" fill="#D9A400" fill-opacity=".38" transform="rotate(28 15 -4)"></ellipse><ellipse cx="0" cy="2" rx="9" ry="15" fill="#D9A400"></ellipse><line x1="-9" y1="-3" x2="9" y2="-3" stroke="#2E5339" stroke-width="2.4"></line><line x1="-9" y1="3" x2="9" y2="3" stroke="#2E5339" stroke-width="2.4"></line><line x1="-7.5" y1="9" x2="7.5" y2="9" stroke="#2E5339" stroke-width="2.4"></line><circle cx="0" cy="-15" r="4.4" fill="#D9A400"></circle><path d="M-2.5,-19 Q-6,-25 -9,-24" fill="none" stroke="#D9A400" stroke-width="3.2" stroke-linecap="round"></path><path d="M2.5,-19 Q6,-25 9,-24" fill="none" stroke="#D9A400" stroke-width="3.2" stroke-linecap="round"></path></g>
+<symbol id="rdo-seal" viewBox="0 0 100 100"><polygon points="25,2 75,2 98,50 75,98 25,98 2,50" fill="#2E5339" stroke="#D9A400" stroke-width="2.5"></polygon><use href="#rdo-bee"></use></symbol>
+</defs></svg>
+
+<!-- ============================================================
+     1 · BANDEAU D'ANNONCE
+     ============================================================ -->
+<!-- <div class="announce">Lancement · Vague 1 — Miel pur testé et traçable, livré partout au Bénin</div> -->
+
+<!-- ============================================================
+     2 · HEADER STICKY
+     ============================================================ -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="Ruche d'Or, accueil">
+      <svg width="36" height="36" viewBox="0 0 100 100" aria-hidden="true"><use href="#rdo-seal"></use></svg>
+      <span class="brand__name">Ruche d'Or</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="nav__link" href="#promesse">La promesse</a>
+      <a class="nav__link" href="#produit">Le produit</a>
+      <a class="nav__link" href="#histoire">L'histoire</a>
+      <a class="nav__link" href="#acheter">Acheter</a>
+      <a class="nav__wa js-wa" href="#">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============================================================
+     3 · HÉRO
+     ============================================================ -->
+<section id="hero" class="hero">
+  <svg class="hero__bg" width="640" height="640" viewBox="0 0 100 100" aria-hidden="true"><polygon points="25,2 75,2 98,50 75,98 25,98 2,50" fill="none" stroke="#2E5339" stroke-width="1.6"></polygon></svg>
+  <div class="wrap">
+    <div>
+      <div class="hero__eyebrow kicker"><svg width="14" height="14" viewBox="0 0 100 100" aria-hidden="true"><polygon points="25,2 75,2 98,50 75,98 25,98 2,50" fill="#D9A400"></polygon></svg>Miel pur · Bénin</div>
+      <h1 class="hero__title">Ruche d'Or</h1>
+      <p class="hero__slogan script">Du rucher à votre table, sans détour.</p>
+      <p class="hero__text">Un miel dont la pureté et l'origine ne se discutent pas — visibles, vérifiables, et livrés dans un pot scellé que vous pouvez inspecter.</p>
+      <div class="hero__cta">
+        <a class="btn btn--gold js-wa" href="#">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#21402c" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2 1c.3.1.4.2.5.3.1.2.1.8-.1 1.3Z"></path></svg>
+          Commander sur WhatsApp
+        </a>
+        <a class="btn btn--ghost" href="#produit">Voir le produit</a>
+      </div>
+    </div>
+    <div class="hero__art">
+      <div class="hero__halo"></div>
+      <div class="jar-scale" style="transform:scale(1.12);">
+        <!-- POT 1 L -->
+        <div class="jar">
+          <div class="jar__shadow"></div>
+          <div class="jar__lid"></div>
+          <div class="jar__lidband"></div>
+          <div class="jar__neck"></div>
+          <div class="jar__body">
+            <div class="jar__top"></div>
+            <div class="jar__glare"></div>
+            <div class="jar__rshade"></div>
+            <div class="jar__label">
+              <svg class="jar__wm" width="150" height="150" viewBox="0 0 100 100" aria-hidden="true"><polygon points="25,2 75,2 98,50 75,98 25,98 2,50" fill="none" stroke="#2E5339" stroke-width="2"></polygon></svg>
+              <svg class="jar__seal" width="29" height="29" viewBox="0 0 100 100" aria-hidden="true"><polygon points="25,2 75,2 98,50 75,98 25,98 2,50" fill="#2E5339" stroke="#D9A400" stroke-width="2.5"></polygon><g transform="translate(50,51)"><ellipse cx="-15" cy="-4" rx="11" ry="6.5" fill="#D9A400" fill-opacity=".38" transform="rotate(-28 -15 -4)"></ellipse><ellipse cx="15" cy="-4" rx="11" ry="6.5" fill="#D9A400" fill-opacity=".38" transform="rotate(28 15 -4)"></ellipse><ellipse cx="0" cy="2" rx="9" ry="15" fill="#D9A400"></ellipse><line x1="-9" y1="-3" x2="9" y2="-3" stroke="#2E5339" stroke-width="2.4"></line><line x1="-9" y1="3" x2="9" y2="3" stroke="#2E5339" stroke-width="2.4"></line><line x1="-7.5" y1="9" x2="7.5" y2="9" stroke="#2E5339" stroke-width="2.4"></line><circle cx="0" cy="-15" r="4.4" fill="#D9A400"></circle><path d="M-2.5,-19 Q-6,-25 -9,-24" fill="none" stroke="#D9A400" stroke-width="3.2" stroke-linecap="round"></path><path d="M2.5,-19 Q6,-25 9,-24" fill="none" stroke="#D9A400" stroke-width="3.2" stroke-linecap="round"></path></g></svg>
+              <div class="jar__brand">Ruche d'Or</div>
+              <div class="jar__rule"></div>
+              <div class="jar__pure">MIEL PUR · SANS SIROP<br>AJOUTÉ — TESTÉ</div>
+              <div class="jar__foot">
+                <div class="jar__lot">LOT ________<br>RÉC. ____ / ____</div>
+                <div class="jar__weight">1 L</div>
+              </div>
+            </div>
+            <div class="jar__edge"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4 · LA PROMESSE
+     ============================================================ -->
+<section id="promesse" class="sec--green pad">
+  <div class="wrap" style="max-width:1100px;">
+    <div class="kicker" style="color:var(--gold);">La promesse</div>
+    <h2 class="h2 promise__title">Miel pur, sans sirop ajouté. <em>Testé</em> — et vérifiable à chaque pot.</h2>
+    <p class="lead promise__lead">Sur un marché où le miel se vend souvent en bouteilles de récupération, nous prenons le parti inverse : tout ce qui garantit l'authenticité est inscrit, lisible, et reste avec le produit.</p>
+    <div class="grid-3">
+      <div class="promise__cell">
+        <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><polygon points="25,2 75,2 98,50 75,98 25,98 2,50" fill="none" stroke="#D9A400" stroke-width="4"></polygon></svg>
+        <h3>Origine déclarée</h3>
+        <p>La région et le type floral du miel, indiqués sur chaque pot.</p>
+      </div>
+      <div class="promise__cell">
+        <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><polygon points="25,2 75,2 98,50 75,98 25,98 2,50" fill="none" stroke="#D9A400" stroke-width="4"></polygon></svg>
+        <h3>Fournisseur connu</h3>
+        <p>Un seul apiculteur partenaire, identifié, pas un mélange anonyme.</p>
+      </div>
+      <div class="promise__cell">
+        <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><polygon points="25,2 75,2 98,50 75,98 25,98 2,50" fill="none" stroke="#D9A400" stroke-width="4"></polygon></svg>
+        <h3>Numéro de lot</h3>
+        <p>Chaque lot porte un numéro et une date de récolte traçables.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5 · LE PRODUIT — deux formats + prix
+     ============================================================ -->
+<section id="produit" class="product sec--ivory pad">
+  <div class="wrap" style="max-width:1150px;">
+    <div class="product__art">
+      <div class="product__plinth"></div>
+      <div class="product__jars">
+        <!-- POT 0,5 L — plus petit -->
+        <div class="jar-outer jar-outer--sm">
+          <div class="jar">
+            <div class="jar__shadow"></div>
+            <div class="jar__lid"></div>
+            <div class="jar__lidband"></div>
+            <div class="jar__neck"></div>
+            <div class="jar__body">
+              <div class="jar__top"></div>
+              <div class="jar__glare"></div>
+              <div class="jar__rshade"></div>
+              <div class="jar__label">
+                <svg class="jar__wm" width="150" height="150" viewBox="0 0 100 100" aria-hidden="true"><polygon points="25,2 75,2 98,50 75,98 25,98 2,50" fill="none" stroke="#2E5339" stroke-width="2"></polygon></svg>
+                <svg class="jar__seal" width="29" height="29" viewBox="0 0 100 100" aria-hidden="true"><polygon points="25,2 75,2 98,50 75,98 25,98 2,50" fill="#2E5339" stroke="#D9A400" stroke-width="2.5"></polygon><g transform="translate(50,51)"><ellipse cx="-15" cy="-4" rx="11" ry="6.5" fill="#D9A400" fill-opacity=".38" transform="rotate(-28 -15 -4)"></ellipse><ellipse cx="15" cy="-4" rx="11" ry="6.5" fill="#D9A400" fill-opacity=".38" transform="rotate(28 15 -4)"></ellipse><ellipse cx="0" cy="2" rx="9" ry="15" fill="#D9A400"></ellipse><line x1="-9" y1="-3" x2="9" y2="-3" stroke="#2E5339" stroke-width="2.4"></line><line x1="-9" y1="3" x2="9" y2="3" stroke="#2E5339" stroke-width="2.4"></line><line x1="-7.5" y1="9" x2="7.5" y2="9" stroke="#2E5339" stroke-width="2.4"></line><circle cx="0" cy="-15" r="4.4" fill="#D9A400"></circle><path d="M-2.5,-19 Q-6,-25 -9,-24" fill="none" stroke="#D9A400" stroke-width="3.2" stroke-linecap="round"></path><path d="M2.5,-19 Q6,-25 9,-24" fill="none" stroke="#D9A400" stroke-width="3.2" stroke-linecap="round"></path></g></svg>
+                <div class="jar__brand">Ruche d'Or</div>
+                <div class="jar__rule"></div>
+                <div class="jar__pure">MIEL PUR · SANS SIROP<br>AJOUTÉ — TESTÉ</div>
+                <div class="jar__foot">
+                  <div class="jar__lot">LOT ________<br>RÉC. ____ / ____</div>
+                  <div class="jar__weight">0,5 L</div>
+                </div>
+              </div>
+              <div class="jar__edge"></div>
+            </div>
+          </div>
+        </div>
+        <!-- POT 1 L — plus grand -->
+        <div class="jar-outer jar-outer--lg">
+          <div class="jar">
+            <div class="jar__shadow"></div>
+            <div class="jar__lid"></div>
+            <div class="jar__lidband"></div>
+            <div class="jar__neck"></div>
+            <div class="jar__body">
+              <div class="jar__top"></div>
+              <div class="jar__glare"></div>
+              <div class="jar__rshade"></div>
+              <div class="jar__label">
+                <svg class="jar__wm" width="150" height="150" viewBox="0 0 100 100" aria-hidden="true"><polygon points="25,2 75,2 98,50 75,98 25,98 2,50" fill="none" stroke="#2E5339" stroke-width="2"></polygon></svg>
+                <svg class="jar__seal" width="29" height="29" viewBox="0 0 100 100" aria-hidden="true"><polygon points="25,2 75,2 98,50 75,98 25,98 2,50" fill="#2E5339" stroke="#D9A400" stroke-width="2.5"></polygon><g transform="translate(50,51)"><ellipse cx="-15" cy="-4" rx="11" ry="6.5" fill="#D9A400" fill-opacity=".38" transform="rotate(-28 -15 -4)"></ellipse><ellipse cx="15" cy="-4" rx="11" ry="6.5" fill="#D9A400" fill-opacity=".38" transform="rotate(28 15 -4)"></ellipse><ellipse cx="0" cy="2" rx="9" ry="15" fill="#D9A400"></ellipse><line x1="-9" y1="-3" x2="9" y2="-3" stroke="#2E5339" stroke-width="2.4"></line><line x1="-9" y1="3" x2="9" y2="3" stroke="#2E5339" stroke-width="2.4"></line><line x1="-7.5" y1="9" x2="7.5" y2="9" stroke="#2E5339" stroke-width="2.4"></line><circle cx="0" cy="-15" r="4.4" fill="#D9A400"></circle><path d="M-2.5,-19 Q-6,-25 -9,-24" fill="none" stroke="#D9A400" stroke-width="3.2" stroke-linecap="round"></path><path d="M2.5,-19 Q6,-25 9,-24" fill="none" stroke="#D9A400" stroke-width="3.2" stroke-linecap="round"></path></g></svg>
+                <div class="jar__brand">Ruche d'Or</div>
+                <div class="jar__rule"></div>
+                <div class="jar__pure">MIEL PUR · SANS SIROP<br>AJOUTÉ — TESTÉ</div>
+                <div class="jar__foot">
+                  <div class="jar__lot">LOT ________<br>RÉC. ____ / ____</div>
+                  <div class="jar__weight">1 L</div>
+                </div>
+              </div>
+              <div class="jar__edge"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product__info">
+      <div class="kicker" style="color:var(--brown);">Le produit</div>
+      <h2 class="product__title">Un seul miel,<br>fait correctement.</h2>
+      <p class="product__text">Pot en verre transparent : la couleur et la clarté du miel restent visibles, l'étiquette ne couvre que le centre. Le contenant lui-même fait partie de la preuve.</p>
+
+      <div class="formats">
+        <div class="format">
+          <div class="format__size">0,5 L</div>
+          <div class="format__price js-price-05">—</div>
+          <div class="format__note">Pour goûter</div>
+        </div>
+        <div class="format format--feature">
+          <div class="format__tag">Le plus demandé</div>
+          <div class="format__size">1 L</div>
+          <div class="format__price js-price-1">—</div>
+          <div class="format__note">Le meilleur rapport</div>
+        </div>
+      </div>
+
+      <dl class="specs">
+        <div class="specs__row"><dt>Origine florale</dt><dd>Miel toutes fleurs</dd></div>
+        <div class="specs__row"><dt>Composition</dt><dd>100 % miel — rien d'autre</dd></div>
+      </dl>
+
+      <a class="product__link" href="#acheter">Comment commander &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     6 · L'HISTOIRE
+     ============================================================ -->
+<section id="histoire" class="story sec--green pad">
+  <svg class="story__bg" width="520" height="520" viewBox="0 0 100 100" aria-hidden="true"><polygon points="25,2 75,2 98,50 75,98 25,98 2,50" fill="none" stroke="#D9A400" stroke-width="2"></polygon></svg>
+  <div class="story__inner">
+    <div class="kicker" style="color:var(--gold);">L'histoire</div>
+    <h2 class="story__title">Né d'une méfiance, construit sur une relation</h2>
+    <p class="story__quote">« Trop de miel falsifié, trop de doute. Nous avons préféré commencer par une seule chose : un fournisseur que l'on connaît, un produit que l'on peut prouver. »</p>
+    <p class="story__text">Ruche d'Or naît d'un constat simple sur le marché local. Plutôt que d'ajouter une marque de plus, nous avons noué une relation directe avec un apiculteur partenaire et bâti tout le reste — l'étiquette, le pot, la traçabilité — autour de cette confiance. Sans surenchère. Sans détour.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     7 · TÉMOIGNAGES
+     ============================================================ -->
+<section id="temoignages" class="sec--ivory pad">
+  <div class="wrap" style="max-width:1150px;">
+    <div class="tm__head">
+      <div class="kicker" style="color:var(--brown);">Ils ont goûté</div>
+      <h2 class="tm__title">Les premiers retours</h2>
+    </div>
+    <div class="tm__grid">
+      <figure class="tm__card" style="margin:0;">
+        <svg width="36" height="36" viewBox="0 0 100 100" aria-hidden="true"><use href="#rdo-seal"></use></svg>
+        <blockquote class="tm__quote" style="margin:0;">Le premier miel que j'achète sans me demander s'il est coupé. Le pot scellé et le numéro de lot, ça change tout.</blockquote>
+        <figcaption class="tm__who"><div class="tm__name">Aïcha D.</div><div class="tm__place">Cotonou</div></figcaption>
+      </figure>
+      <figure class="tm__card" style="margin:0;">
+        <svg width="36" height="36" viewBox="0 0 100 100" aria-hidden="true"><use href="#rdo-seal"></use></svg>
+        <blockquote class="tm__quote" style="margin:0;">Goût franc, texture nette. On sent que c'est un vrai miel d'apiculteur, pas un mélange de supermarché.</blockquote>
+        <figcaption class="tm__who"><div class="tm__name">Romuald K.</div><div class="tm__place">Calavi</div></figcaption>
+      </figure>
+      <figure class="tm__card" style="margin:0;">
+        <svg width="36" height="36" viewBox="0 0 100 100" aria-hidden="true"><use href="#rdo-seal"></use></svg>
+        <blockquote class="tm__quote" style="margin:0;">J'ai commandé par WhatsApp un soir, livré le lendemain. Sérieux et sans chichi — exactement ce qu'ils promettent.</blockquote>
+        <figcaption class="tm__who"><div class="tm__name">Florence A.</div><div class="tm__place">Porto-Novo</div></figcaption>
+      </figure>
+    </div>
+    <p class="tm__note">Emplacements réservés aux retours de la vague 1 — à compléter au fil du lancement.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     8 · COMMENT ACHETER
+     ============================================================ -->
+<section id="acheter" class="sec--green pad">
+  <div class="wrap" style="max-width:1100px;">
+    <div class="buy__head">
+      <div class="kicker" style="color:var(--gold);">Comment acheter</div>
+      <h2 class="buy__title">Trois façons de commander</h2>
+      <p class="buy__lead">Pas de panier, pas de paiement en ligne pour l'instant — juste un contact direct et une réponse rapide. Nous livrons aujourd'hui sur tout le territoire national.</p>
+    </div>
+    <div class="buy__grid">
+      <div class="buy__card">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="#D9A400" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2 1c.3.1.4.2.5.3.1.2.1.8-.1 1.3Z"></path></svg>
+        <h3>WhatsApp</h3>
+        <p>Le plus simple. Écrivez-nous, indiquez le format et la quantité, on confirme la disponibilité.</p>
+        <a class="btn btn--gold btn--sm js-wa" href="#">Ouvrir WhatsApp</a>
+      </div>
+      <div class="buy__card">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D9A400" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1.2" fill="#D9A400"></circle></svg>
+        <h3>Réseaux sociaux</h3>
+        <p>Suivez les lots disponibles et commandez par message direct sur Instagram, Facebook ou TikTok.</p>
+        <a class="btn btn--ghost-light btn--sm js-ig" href="#">Nous suivre</a>
+      </div>
+      <div class="buy__card">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D9A400" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.7-7-11a7 7 0 0 1 14 0c0 5.3-7 11-7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+        <h3>Points de vente</h3>
+        <p>Bientôt disponible chez une sélection de commerces partenaires. Demandez la liste à jour.</p>
+        <a class="btn btn--ghost-light btn--sm js-wa" href="#">Demander la liste</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     9 · FOOTER
+     ============================================================ -->
+<footer id="contact" class="site-footer">
+  <div class="inner">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="brand"><svg width="38" height="38" viewBox="0 0 100 100" aria-hidden="true"><use href="#rdo-seal"></use></svg><span class="brand__name" style="font-size:26px;">Ruche d'Or</span></div>
+        <p class="script">Sans détour.</p>
+      </div>
+      <div class="footer__col">
+        <div class="kicker">Contact</div>
+        <div class="footer__links">
+          <a class="js-phone" href="#">+229 …</a>
+          <a class="js-wa" href="#">WhatsApp — réponse rapide</a>
+          <a class="js-email" href="#">contact@…</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <div class="kicker">Suivez-nous</div>
+        <div class="footer__links">
+          <a class="js-ig" href="#">Instagram</a>
+          <a class="js-fb" href="#">Facebook</a>
+          <a class="js-tt" href="#">TikTok</a>
+          <span>Bénin · Couverture nationale</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <span>© <span class="js-year">2026</span> Ruche d'Or — Miel pur, testé, traçable.</span>
+      <span>Du rucher à votre table, sans détour.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Bouton flottant WhatsApp -->
+<a class="fab js-wa" href="#" aria-label="Commander sur WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#21402c" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2 1c.3.1.4.2.5.3.1.2.1.8-.1 1.3Z"></path></svg>
+</a>
+
+<!-- ============================================================
+     CONFIGURATION — modifiez UNIQUEMENT ce bloc
+     Tous les contacts, liens et prix du site sont ici.
+     ============================================================ -->
+<script>
+  const CONFIG = {
+    // --- WhatsApp ---
+    // Numéro au format international SANS le « + » ni espaces (229 = indicatif Bénin).
+    whatsappNumber: "2290167911346",
+    // Message pré-rempli quand le client ouvre WhatsApp (laisser "" pour aucun).
+    whatsappMessage: "Bonjour Ruche d'Or, je souhaite commander du miel.",
+
+    // --- Téléphone & e-mail ---
+    phoneDisplay: "+229 01 67 91 13 46",   // tel affiché
+    phoneTel:     "+2290167911346",           // tel pour le lien (sans espaces)
+    email:        "bonjour@ruchedor.bj",
+
+    // --- Réseaux sociaux (URL complètes + identifiant affiché) ---
+    instagramUrl: "https://instagram.com/ruchedor",
+    instagramHandle: "@ruchedor",
+    facebookUrl:  "https://facebook.com/ruchedor",
+    facebookHandle: "Ruche d'Or",
+    tiktokUrl:    "https://tiktok.com/@ruchedor",
+    tiktokHandle: "@ruchedor",
+
+    // --- Prix (PLACEHOLDERS — à remplacer par vos tarifs réels) ---
+    price05: "2 500 FCFA",   // pot 0,5 L
+    price1:  "4 500 FCFA"    // pot 1 L
+  };
+
+  /* ---- Câblage automatique (ne rien modifier en dessous) ---- */
+  (function () {
+    const waHref = "https://wa.me/" + CONFIG.whatsappNumber +
+      (CONFIG.whatsappMessage ? "?text=" + encodeURIComponent(CONFIG.whatsappMessage) : "");
+
+    document.querySelectorAll(".js-wa").forEach(function (el) { el.href = waHref; });
+
+    document.querySelectorAll(".js-phone").forEach(function (el) {
+      el.href = "tel:" + CONFIG.phoneTel;
+      el.textContent = CONFIG.phoneDisplay;
+    });
+    document.querySelectorAll(".js-email").forEach(function (el) {
+      el.href = "mailto:" + CONFIG.email;
+      el.textContent = CONFIG.email;
+    });
+
+    document.querySelectorAll(".js-ig").forEach(function (el) {
+      el.href = CONFIG.instagramUrl;
+      if (el.classList.contains("footer__links") || el.closest(".footer__links")) el.textContent = "Instagram · " + CONFIG.instagramHandle;
+    });
+    document.querySelectorAll(".js-fb").forEach(function (el) {
+      el.href = CONFIG.facebookUrl;
+      el.textContent = "Facebook · " + CONFIG.facebookHandle;
+    });
+    document.querySelectorAll(".js-tt").forEach(function (el) {
+      el.href = CONFIG.tiktokUrl;
+      el.textContent = "TikTok · " + CONFIG.tiktokHandle;
+    });
+
+    document.querySelectorAll(".js-price-05").forEach(function (el) { el.textContent = CONFIG.price05; });
+    document.querySelectorAll(".js-price-1").forEach(function (el) { el.textContent = CONFIG.price1; });
+
+    document.querySelectorAll(".js-year").forEach(function (el) { el.textContent = new Date().getFullYear(); });
+  })();
+</script>
+
+</body>
+</html>
